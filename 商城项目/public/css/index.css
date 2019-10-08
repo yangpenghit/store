@@ -1,0 +1,346 @@
+/* 第一行 */
+.first_row{
+    padding:0;
+    background-image: url(../img/bg-img/bg-2.jpg);
+    background-size:100% auto;
+    width:100%; 
+    background-repeat:no-repeat;
+    height:540px;
+    border:1px solid white;
+    display: flex;
+    align-items: center;
+}
+.first_row div{
+    width: 50%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.first_row div p:first-child{
+    color: rgb(220,3,69);
+    font-size: 30px;
+    margin-bottom: 0;
+}
+.first_row div p:nth-child(2){
+    font-size: 50px;
+    font-weight: bold;
+    margin-top: 0;
+    font-family: '微软雅黑';
+}
+.first_row div button{
+    width:200px;
+    height: 50px;
+    background-color: rgb(3,21,255);
+    color: white;
+    font-size: 20px;
+    border: none;
+}
+.first_row div button a{
+    color: white;
+}
+.popular_product{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2% 0;
+}
+.second_row{
+    width: 100%;
+    display:flex;
+    justify-content: center;
+}
+/* owl-carousel 循环 */
+.second_swiperson .second_swiperson_sale{
+    position: absolute;
+    margin-top:5%;
+    margin-left:3%;
+    width: 50px;
+    height: 25px;
+    background-color: rgb(220,3,69);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.second_swiperson .second_swiperson_li{
+    width: 100%;
+    position: absolute;
+    transition:all 0.4s linear;
+    opacity: 0;
+}
+.second_swiperson .second_swiperson_li:hover{
+    opacity: 1;
+}
+.second_swiperson .second_swiperson_li button{
+    width:70%;
+    height: 50px;
+    background-color: rgb(3,21,255);
+    font-size: 20px;
+    border: none;
+    position: absolute;
+    z-index: 5;
+    margin-top: 99%;
+    margin-left:15%;
+    transition: all 0.3s linear;
+}
+.second_swiperson .second_swiperson_li button:hover{
+    background-color: rgb(220,3,69);
+}
+.second_swiperson .second_swiperson_li button a{
+    color: white;
+}
+
+ .second_swiperson p{
+    margin: 2% 0;
+    padding: 0;
+    font-family: '微软雅黑';
+}
+ .second_swiperson .second_swiper_p{
+    color: rgb(120,120,120);
+    font-size: 14px;
+    font-weight: bold;
+}
+ .second_swiperson p:last-child{
+    color: rgb(0,0,0);
+    font-size: 15px;
+    font-weight: bold;
+}
+ .second_swiperson span{
+    color: rgb(170,170,170);
+    font-size: 13px;
+    text-decoration: line-through;
+}
+
+.third_row{
+    background-image: url(../img/bg-img/bg-3.jpg);
+    background-size:100% auto;
+    background-repeat:no-repeat;
+    margin-top: 5%;
+}
+.third_row .third_row_first{
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.third_row .third_row_first .third_row_wish{
+    display: flex;
+    width: 38%;
+    justify-content: space-around;
+    color: #ffffff;
+    
+}
+.third_row .third_row_first .third_row_wish a{
+    color: #ffffff;
+}
+.third_row .third_row_first .third_row_wish a:hover{
+    color: #937C6F;
+}
+.third_row .third_row_first .third_row_lorme{
+    color: #ffffff;
+}
+.third_row .third_row_first .third_row_lorme p:hover{
+    color: #937C6F;
+}
+.third_row .third_row_first .third_row_img{
+    margin-top:2%;
+    display: flex;
+    justify-content: space-around;
+}
+.third_row .third_row_first .third_row_img div{
+    width: 15%;
+    overflow: hidden;
+}
+.third_row .third_row_first .third_row_img div img{
+    width: 100%;
+    transition: all 0.3s linear;
+}
+.third_row .third_row_first .third_row_img div img:hover{
+    transform: scale(1.2)
+}
+.fourth_row .fourth_row_promo{
+    display: flex;
+    flex-direction: column;  
+    align-items: center; 
+    margin:5%;
+}
+.fourth_row .fourth_row_promo .fourth_row_price{
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+}
+.fourth_row .fourth_row_promo .fourth_row_price h4{
+    color: rgb(147,124,111);
+    margin: 0;
+}
+.fourth_row .fourth_row_promo .fourth_row_price h1{
+    color: rgb(147,124,111);
+    font-size: 50px
+}
+.fourth_row .fourth_row_promo .fourth_row_product{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+}
+.fourth_row .fourth_row_promo .fourth_row_product>div{
+    width:30%;
+    height: 30%;
+    display: flex;
+    flex-direction:column;
+}
+.fourth_row .fourth_row_promo .fourth_row_product>div img{
+    width: 100%;
+}
+.fourth_row .fourth_row_promo .fourth_row_product>div h2{
+    width: 100%;
+    background-color: #2F2F2F;
+    margin-top: 0;
+    padding: 5% 0;
+    text-align: center;
+}
+.fourth_row .fourth_row_promo .fourth_row_product>div h2 a{
+    color:#ffffff;
+}
+.fourth_row .fourth_row_promo .fourth_row_product>div a:hover{
+    color: rgb(147,124,111);
+}
+.fourth_row .fourth_row_promo .fourth_row_product .fourth_row_single_1{
+    position: absolute;
+    z-index:5;
+    width: 30%;
+    background-color: transparent; 
+    top: 38%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    color: #ffffff;
+}
+.fourth_row .fourth_row_promo .fourth_row_product .fourth_row_single_1 h1{
+    margin: 0;
+    padding-right:8% ;
+}
+.fourth_row .fourth_row_promo .fourth_row_product .fourth_row_single_1 h3{
+    margin-top:1%;
+    padding-right:8% ;
+}
+.fourth_row .fourth_row_promo .fourth_row_product .fourth_row_single_2{
+    position: absolute;
+    z-index:5;
+    width: 30%;
+    background-color: rgba(47,47,47,0.5); 
+    top: 38%;display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #ffffff ;
+}
+.fourth_row .fourth_row_promo .fourth_row_product .fourth_row_single_2 h1{
+    margin: 0;
+    padding-right:8% ;
+}
+.fourth_row .fourth_row_promo .fourth_row_product .fourth_row_single_2 h3{
+    margin:2% 0;
+    padding-right:8%;
+}
+.fourth_row .fourth_row_promo .fourth_row_product .fourth_row_single_3{
+    position: absolute;
+    z-index:5;
+    width: 14%;
+    height: 35%;
+    background-color: rgb(35,35,35);
+    top: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 2%;
+    color: #ffffff;
+}
+.fourth_row .fourth_row_promo .fourth_row_product .fourth_row_single_3 h1{
+    margin:2%;
+}
+.fourth_row .fourth_row_promo .fourth_row_product .fourth_row_single_3 h3{
+    margin:2%;
+}
+.fifth_row{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 5%;
+}
+.fifth_row .fifth_row_price{
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+}
+.fifth_row .fifth_row_price h4{
+    color: rgb(147,124,111);
+    margin: 0;
+}
+.fifth_row .fifth_row_price h1{
+    color: rgb(147,124,111);
+    font-size: 50px
+}
+.fifth_row .fifth_row_product{
+    width: 95%;
+    display: flex;
+    justify-content: space-around;
+}
+.fifth_row .fifth_row_product .fifth_row_single{
+    width: 30%;
+}
+.fifth_row .fifth_row_product .fifth_row_single img{
+    width: 100%;
+}
+.fifth_row .fifth_row_product .fifth_row_single .fifth_row_describe{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top:8%;
+}
+.fifth_row .fifth_row_product .fifth_row_single .fifth_row_describe .fifth_row_describe_1{
+    width: 70%;
+    height: 100%;
+}
+.fifth_row .fifth_row_product .fifth_row_single .fifth_row_describe .fifth_row_describe_1 p{
+    margin: 3% 0;
+    font: normal normal normal 18px '微软雅黑';
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.fifth_row .fifth_row_product .fifth_row_single .fifth_row_describe .fifth_row_describe_1 h2{
+    margin: 0;
+    color: rgb(138,138,138)
+}
+.fifth_row .fifth_row_product .fifth_row_single .fifth_row_describe .fifth_row_describe_1 .fifth_row_star .fifth_row_color{
+    color: rgb(245,192,111);
+}
+.fifth_row .fifth_row_product .fifth_row_single .fifth_row_describe .fifth_row_describe_2{
+    width: 30%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.fifth_row .fifth_row_product .fifth_row_single .fifth_row_describe .fifth_row_describe_2 a:first-child{
+    padding: 3%;
+    background-color: rgb(147,124,111);
+    margin-right: 10%;
+    transition: all 0.2s linear;
+}
+.fifth_row .fifth_row_product .fifth_row_single .fifth_row_describe .fifth_row_describe_2 a:first-child:hover{
+    background-color: rgb(47,47,47);
+}
+.fifth_row .fifth_row_product .fifth_row_single .fifth_row_describe .fifth_row_describe_2 a:last-child{
+    padding: 3%;
+    background-color: rgb(224,227,228);
+    margin-right: 10%;
+}
+.fifth_row .fifth_row_product .fifth_row_single .fifth_row_describe .fifth_row_describe_2 a:last-child:hover{
+    background-color: rgb(173, 155, 155);
+}

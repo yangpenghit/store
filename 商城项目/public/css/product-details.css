@@ -1,0 +1,311 @@
+.product{
+    width: 75%;
+    margin: 0 auto;
+}
+.product_1{
+    display: flex;
+    margin-top: 2%;
+    justify-content: space-around;
+}
+.container{
+    position: relative;
+    width: 43%;
+    height: 43%;
+}
+.container>img{
+    display: block;
+    width: 100%;
+}
+.slider{
+    display: none;
+    position: absolute;
+    cursor: move;
+    width: 50%;
+    height: 50%;
+    left: 0;
+    top: 0;
+    background-color: blue;
+    opacity: 0.3;
+}
+.enlarge{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 5;
+    left: 102%;
+    top: 0;
+    overflow: hidden;
+    display: none;
+}
+.enlarge>img{
+    display: block;
+    width: 200%;
+    height: 200%;
+    left: 0;
+    top: 0;
+    position: absolute;
+}
+.shopping{
+    width: 50%;
+}
+.product_1 .shopping .first_row>span{
+    padding: 1% 2%;
+    color: antiquewhite;
+    background-color: rgb(0,207,107);
+    border-radius: 8%;
+    display: inline-block;
+}
+.product_1 .shopping .first_row>p{
+    display: inline;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+.product_1 .shopping .second_row{
+    margin-top:5%;
+}
+.product_1 .shopping .second_row h5{
+    width: 15%;
+    padding-left:2%;
+    font-size: 16px;
+    margin: auto 0;
+}
+.product_1 .shopping .second_row>div{
+    display: flex;
+    padding: 1% 0;
+}
+.product_1 .shopping .second_row>div:first-child{
+    background-color: rgb(255,242,232);
+}
+.product_1 .shopping .second_row>div:nth-child(2){
+    background-color: rgb(255,242,232);
+}
+.product_1 .shopping .second_row .price>p{
+    width: 58%;
+    font-size: 17px;
+    text-decoration:line-through;
+    padding: 0;
+    margin: auto;
+}
+.product_1 .shopping .second_row .price .success{
+   width:15%;
+}
+.product_1 .shopping .second_row .price .success p{
+    margin:auto;
+    text-align:center;
+    color:rgb(108,108,108);
+    font-size: 20px;
+}
+.product_1 .shopping .second_row .price .success span{
+    display: block;
+    text-align:center;
+    font-size: 13px;
+}
+.product_1 .shopping .second_row .now_price>div{
+    width: 88%;
+    display: flex;
+}
+.product_1 .shopping .second_row .now_price>div p{
+    color: rgb(255,68,0);
+    font-size: 30px;
+    font-weight: bold;
+    margin:0;
+    padding: 0;
+    
+}
+.product_1 .shopping .second_row .now_price>div div{
+    margin:auto 0;
+    background-color: rgb(255,142,27);
+    color: white;   
+    font-size:15px;
+    padding:  0 1%;
+}
+.product_1 .shopping .second_row .discounts{
+    display: flex; 
+    padding: 3% 0;
+    background-color:rgb(255,249,245);
+}
+.product_1 .shopping .second_row .discounts>p{
+    width: 88%;
+    margin:0;
+}
+.product_1 .shopping .second_row .distribution>div{
+    width: 88%;
+}
+.product_1 .shopping .second_row .distribution .address{
+    display: flex;
+    padding: 3% 0;
+}
+.product_1 .shopping .second_row .distribution .address span{
+    padding: 0 1%;
+}
+.product_1 .shopping .second_row .distribution .address .detail_address .first_address{
+    position: relative;
+    border:1px solid rgba(0, 0, 0, 0);
+    width: 105%;
+    padding-left: 5%;
+}
+.product_1 .shopping .second_row .distribution .address .detail_address .first_address>p{
+    margin: 0;
+    display: inline;
+}
+.product_1 .shopping .second_row .distribution .address .detail_address .second_address{
+    position: absolute;
+    width: 30%;
+    border: 1px solid rgb(255,80,2);
+    opacity: 0;
+    background-color: white;
+    z-index: -1;
+}
+.remove{
+    display: flex;
+    width: 99%;
+    padding-top:1%;
+    justify-content: flex-end;
+}
+.choose{
+    display: flex;
+    width: 97%;
+    height: 20%;
+    margin: auto;
+    border-bottom: 1px solid rgb(255,80,2);
+}
+.choose div{
+    display: flex;
+    width: 17%;
+}
+.address .detail_address .second_address .move{
+    position: absolute;
+    border: 1px solid rgb(255,80,2);
+    border-bottom: 1px solid white;
+    transition: all 0.2s linear;
+    margin: 0;
+}
+.choose div:not(:first-child){
+    margin-left: 3%;
+    opacity: 0;
+}
+.choose div{
+padding: 0 1%;
+cursor: pointer;
+white-space: nowrap;
+border: 1px solid rgba(0,0,0,0);
+border-bottom:none;
+}
+.choose div p{
+    margin: 0;
+}
+.choose div i{
+    margin: auto;
+}
+.region{
+    margin: 2% 0;
+}
+.region>table{
+    width: 100%;
+}
+.region>table td{
+    border: 1px solid rgba(255,255,255,0);
+    cursor: pointer;
+    text-align: center;
+    white-space: nowrap;
+}
+.region>table tr td:hover{
+    background-color: rgb(254,144,83);
+    border: 1px solid rgb(255,94,0);
+    color: rgb(255,255,255);     
+}
+.region_1{
+    margin: 2% 0;
+    display:none;
+}
+.region_1>table{
+    width: 100%;
+}
+.region_1>table td{
+    border: 1px solid rgba(255,255,255,0);
+    cursor: pointer;
+    text-align: center;
+    white-space: nowrap;
+}
+.region_1>table tr td:hover{
+    background-color: rgb(254,144,83);
+    border: 1px solid rgb(255,94,0);
+    color: rgb(255,255,255);     
+}
+.region_2{
+    margin: 2% 0;
+    display:none;
+}
+.region_2>table{
+    width: 100%;
+}
+.region_2>table td{
+    border: 1px solid rgba(255,255,255,0);
+    cursor: pointer;
+    text-align: center;
+    white-space: nowrap;
+}
+.region_2>table tr td:hover{
+    background-color: rgb(254,144,83);
+    border: 1px solid rgb(255,94,0);
+    color: rgb(255,255,255);     
+}
+.body_style .product .product_1 .shopping .second_row .size{
+    margin-top: 1%;
+}
+.body_style .product .product_1 .shopping .second_row .size .size_choose{
+    display: flex;
+    width: 70%;
+}
+.body_style .product .product_1 .shopping .second_row .size .size_choose div{
+    width: 10%;
+    text-align: center;
+    border: 1px solid gray;
+    cursor: pointer;
+}
+.body_style .product .product_1 .shopping .second_row .size .size_choose div:not(:first-child){
+    margin-left: 4%;
+}
+.body_style .product .product_1 .shopping .second_row .color{
+    margin: 2% 0;
+}
+.body_style .product .product_1 .shopping .second_row .color .color_choose{
+    display: flex;
+    width: 70%;
+}
+.body_style .product .product_1 .shopping .second_row .color .color_choose div{
+    text-align: center;
+    border: 1px solid gray;
+    cursor: pointer;
+    padding:1%;
+}
+.body_style .product .product_1 .shopping .second_row .color .color_choose div:not(:first-child){
+    margin-left: 4%;
+}
+.body_style .product .product_1 .shopping .second_row .count>div{
+    display: flex;
+    width: 70%;
+}
+.body_style .product .product_1 .shopping .second_row .count .minus{
+    width: 6%;
+    text-align: center;
+    border: 1px solid rgb(204,204,204);
+    cursor: pointer;
+    background-color: rgb(237,237,237);
+    color: rgb(204,204,204);
+}
+.body_style .product .product_1 .shopping .second_row .count .add{
+    width: 6%;
+    text-align: center;
+    border: 1px solid rgb(204,204,204);
+    cursor: pointer;
+}
+.body_style .product .product_1 .shopping .second_row .count .number{
+    width: 12%;
+    text-align: center;
+    border: 1px solid rgb(204,204,204);
+}
+.body_style .product .product_1 .shopping .second_row .count p{
+    margin: 0;
+    margin-left: 2%; 
+}
