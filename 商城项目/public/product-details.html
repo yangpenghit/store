@@ -10,7 +10,49 @@
     <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/product-details.css">
     <style>
-        
+        .body_style .product .product-2{
+            display: flex;
+            justify-content: space-around;
+        }
+        .body_style .product .product-2 .button_img{
+            display: flex;
+            width: 41%;
+            
+        }
+        .body_style .product .product-2 .button_img div{
+            width: 10%;
+            cursor: pointer; 
+        }
+        .body_style .product .product-2 .button_img div:not(:first-child){
+            margin-left: 3%;
+        }
+        .body_style .product .product-2 .button_img div img{
+            width: 100%;
+            border: 2px solid rgba(0,0,0,0);
+        }
+        .body_style .product .product-2 .button_img div img:hover{
+            border: 2px solid rgba(255,68,0,1)
+        }
+        .body_style .product .product-2 .addcar{
+            width: 50%;
+            margin-top: 1%;
+        }
+        .body_style .product .product-2 .addcar button{
+            width: 30%;
+            height: 50px;
+            border: none;
+            font-size: 1.2em;
+            cursor: pointer;
+        }
+        .body_style .product .product-2 .addcar button:first-child{
+            color: rgb(229,81,29);
+            background-color: rgb(255,228,208);
+        }
+        .body_style .product .product-2 .addcar button:last-child{
+            color: rgb(255,255,255);
+            background-color: rgb(255,68,0);
+            margin-left: 5%;
+        }
     </style>
 </head>
 <body>
@@ -101,10 +143,10 @@
             <div class="product">
                 <div class="product_1">
                     <div class="container">
-                        <img src="img/product-details/gallery1_small.jpg" alt="">
+                        <img src="img/product-details/gallery_1.jpg" alt="">
                         <span class="slider"></span>
                         <div class="enlarge">
-                            <img src="img/product-details/gallery1_small.jpg" alt="">
+                            <img src="img/product-details/gallery_1.jpg" alt="">
                         </div>
                     </div>
                     <div class="shopping">
@@ -310,6 +352,22 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+                <div class="product-2">
+                    <div class="button_img">
+                        <div><img src="img/product-details/gallery_1.jpg" alt=""></div>
+                        <div><img src="img/product-details/gallery_2.jpg" alt=""></div>
+                        <div><img src="img/product-details/gallery_3.jpg" alt=""></div>
+                        <div><img src="img/product-details/gallery_4.jpg" alt=""></div>
+                        <div><img src="img/product-details/gallery_5.jpg" alt=""></div>
+                    </div>
+                    <div class="addcar">
+                        <button><span>立即购买</span></button>
+                        <button>
+                            <i class="fa fa-cart-arrow-down"></i>
+                            <span>加入购物车</span>
+                        </button>
                     </div>
                 </div>
             </div>

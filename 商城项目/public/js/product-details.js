@@ -199,4 +199,14 @@ window.onload = function(){
             minus.removeEventListener('click');
         }
     }
+
+    //小图改变大图
+    let hover_div = document.querySelectorAll('.body_style .product .product-2 .button_img div img');
+    for(let i=0;i<hover_div.length;i++){
+        hover_div[i].onmouseover = function(){
+            let src = 'img/product-details/gallery_' + (i+1) +'.jpg'
+            smallimg.src = src;
+            bigimg.src = src;
+        }
+    }
 }

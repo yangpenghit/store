@@ -1,16 +1,15 @@
 .product{
-    width: 75%;
+    width: 80%;
     margin: 0 auto;
 }
 .product_1{
     display: flex;
-    margin-top: 2%;
+    margin-top: 1%;
     justify-content: space-around;
 }
 .container{
     position: relative;
-    width: 43%;
-    height: 43%;
+    width: 40%;
 }
 .container>img{
     display: block;
