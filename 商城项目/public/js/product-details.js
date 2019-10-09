@@ -201,12 +201,78 @@ window.onload = function(){
     }
 
     //小图改变大图
-    let hover_div = document.querySelectorAll('.body_style .product .product-2 .button_img div img');
-    for(let i=0;i<hover_div.length;i++){
-        hover_div[i].onmouseover = function(){
+    let hover_img = document.querySelectorAll('.body_style .product .product-2 .button_img div img');
+    for(let i=0,len=hover_img.length; i<len; i++){
+        hover_img[i].onmouseover = function(){
+            hover_img[i].style.border = '2px solid rgba(255,68,0,1)';
+            for(let m = 0;m<len;m++){
+                if(m !== i){
+                    hover_img[m].style.border = '2px solid rgba(0,0,0,0)';
+                }
+            }
             let src = 'img/product-details/gallery_' + (i+1) +'.jpg'
             smallimg.src = src;
-            bigimg.src = src;
+            bigimg.src = src;;;
         }
+    }
+    //宝贝评价导航栏
+    let product = document.querySelector('.body_style .product_details .product_navigation');
+    let product_navigation = document.querySelectorAll('.product_details .product_navigation .navigation_1 div');
+    let product_introduce = document.querySelectorAll('.product_details .product_introduce>div');
+    let product_img = document.querySelector('.product_details .product_img')
+    let scroollNumber = product_img.offsetTop - 112;
+    for(let i=0,len=product_navigation.length;i<len;i++){
+        product_navigation[i].onclick = function(){
+            if(product.style.position == 'fixed'){
+                window.scrollTo(0,scroollNumber);
+            }
+            product_navigation[i].style.cssText = 'border-bottom: 1px solid rgba(229,229,229,0);background-color:rgb(255,255,255);color:rgb(255,68,0)';
+            product_introduce[i].style.display = 'block';
+            for(let m=0;m<len;m++){
+                if(m!==i){
+                    product_navigation[m].style.cssText = 'border-bottom: 1px solid rgba(229,229,229,1);background-color:rgb(246,246,246);color:black'
+                    product_introduce[m].style.display = 'none';
+                }
+            }
+        }
+    }
+}
+window.onscroll = function(){
+    let  scrollTop = document.documentElement.scrollTop;
+    //导航栏变矮
+    let Header = document.getElementsByClassName('header_style')
+    //显示右部回到顶部按钮
+    let Rightbar = document.getElementsByClassName('rightbar');
+    let header_search_span = document.getElementsByClassName('header_search_span')[0];
+    if(scrollTop >= 100){
+        Rightbar[0].style.cssText = 'z-index:10;opacity:1'
+        Header[0].style.cssText = 'height: 67px;'
+        header_search_span.style.cssText = 'font-size:17px;'
+    }else{
+        Rightbar[0].style.cssText = "z-index:-1;opacity:0"
+        Header[0].style.cssText = 'height: 87px;'
+        header_search_span.style.cssText = 'font-size:20px;'
+    }
+    //定位商品详情导航栏位
+    let product_navigation = document.querySelector('.body_style .product_details .product_navigation');
+    let product_navigationY = product_navigation.getBoundingClientRect().top;
+    let HeaderH = Header[0].offsetHeight;
+    let product = document.querySelector('.body_style .product_details');
+    let productW = product.offsetWidth;
+    let productY = product.getBoundingClientRect().top;
+    let product_introduce = document.querySelector('.product_details .product_introduce');
+    let product_navigation_2 = document.querySelector('.product_details .product_navigation .navigation_2');
+    if(product_navigationY  <= 67){
+        product_navigation.style.position = 'fixed';
+        product_navigation.style.top = '67px';
+        product_navigation.style.width = productW +2 +'px';
+        product_introduce.style.cssText = 'padding-top:'+product_navigation.offsetHeight +'px';
+        product_navigation_2.style.opacity = '1';
+    }
+    if(productY >= 67){
+        product_navigation.style.position = 'relative';
+        product_navigation.style.top =  '0px';
+        product_introduce.style.cssText = 'padding-top:0px';
+        product_navigation_2.style.opacity = '0';
     }
 }

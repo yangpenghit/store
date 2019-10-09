@@ -44,7 +44,7 @@ window.onscroll = function(){
     //显示右部回到顶部按钮
     let Rightbar = document.getElementsByClassName('rightbar');
     let header_search_span = document.getElementsByClassName('header_search_span')[0];
-    if(scrollTop >= 300){
+    if(scrollTop >= 100){
         Rightbar[0].style.cssText = 'z-index:10;opacity:1'
         Header[0].style.cssText = 'height: 67px;'
         header_search_span.style.cssText = 'font-size:17px;'
