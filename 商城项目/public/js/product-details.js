@@ -1,3 +1,16 @@
+//宝贝评价
+function cowryonclick(m){
+    let inputNmber = document.querySelectorAll('.choose_evaluate1 input');
+    let spanNumber = document.querySelectorAll('.choose_evaluate1 span');
+    for(let i=0,len=inputNmber.length;i<len;i++){
+        spanNumber[m].style.color = 'rgb(255,68,0)';
+        for(let n=0;n<len;n++){
+            if(n !== m){
+                spanNumber[n].style.color = 'black';
+            }
+        }
+    }
+}
 window.onload = function(){
     //整个div容器
     let container = document.getElementsByClassName('container')[0];
@@ -21,7 +34,7 @@ window.onload = function(){
         //获取鼠标相对于容器的位置
         let mouse_X = e.pageX - smallimg_X;
         let mouse_Y = e.pageY - smallimg_Y
-        
+
         //开始进行界面操作
         //1、将slider和enlarge两个div设置为可见(display:'block')
         slider.style.display = 'block';
@@ -60,9 +73,10 @@ window.onload = function(){
         }
     }
     //鼠标移出时
-    container.onmouseout = function(){
-        slider.style.display = 'none';
+    slider.onmouseout = function(){
         enlarge.style.display = 'none';
+        slider.style.display = 'none';
+        
     }
 
     let first_address = document.getElementsByClassName('first_address')[0];

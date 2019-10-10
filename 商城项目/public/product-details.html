@@ -73,11 +73,44 @@
             width: 100%;
             display: none;
         }
-        .product_details .product_introduce .product_serve{
-            z-index: 4;
+        .product_details .product_introduce .product_evaluate .cowry_evaluate{
             width: 100%;
-            display: none;
+            border-bottom: 1px solid rgb(229,229,229);
+            margin-top: 2%;
+            height: 40px;
+            padding:  0 0 2px 0;
         }
+        .product_details .product_introduce .product_evaluate .cowry_evaluate>div:first-child{
+            width: 10%;
+            font-size: 1.2em;
+            height: 40px;
+            margin-left: 2%;
+            border: 1px solid rgb(229,229,229);
+            border-bottom: 2px solid #fff;
+            padding: 0 1%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .product_details .product_introduce .product_evaluate .choose_evaluate{
+            margin-top:1%;
+            width: 100%;
+            border: 1px solid rgb(229,229,229);
+            background-color: rgb(252,252,252);
+            display: flex;
+            justify-content: space-between;
+            padding: 1% 0;
+        }
+        .product_details .product_introduce .product_evaluate .choose_evaluate .choose_evaluate1{
+            width: 30%;
+        }
+        .product_details .product_introduce .product_evaluate .choose_evaluate .choose_evaluate1 span{
+            font-size:0.9em;      
+        }
+        .product_details .product_introduce .product_evaluate .choose_evaluate .choose_evaluate1 span:nth-child(2){
+            color:rgb(255,68,0);
+        }
+    
         .product_details .product_introduce .price_explain{
             width: 100%;
         }
@@ -458,6 +491,26 @@
                         </div>
                     </div>
                     <div class="product_evaluate">
+                        <div class="cowry_evaluate">
+                            <div><p>宝贝评价</p></div>
+                        </div>
+                        <div class="choose_evaluate">
+                            <div class="choose_evaluate1">
+                                <form action="">
+                                    <input type="radio" name="evaluate" checked onclick="cowryonclick(0)">
+                                    <span>全部</span>
+                                    <input type="radio" name="evaluate" onclick="cowryonclick(1)">
+                                    <span>好评</span>
+                                    <input type="radio" name="evaluate" onclick="cowryonclick(2)">
+                                    <span>中评</span>
+                                    <input type="radio" name="evaluate" onclick="cowryonclick(3)">
+                                    <span>差评</span>
+                                </form>
+                            </div>
+                            <div class="choose_evaluate2">
+                                
+                            </div>
+                        </div>
                         <div class="price_explain">
                             <h4>价格说明</h4>
                             <div>
