@@ -10,122 +10,6 @@
     <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/product-details.css">
     <style>
-        .body_style .product_details{
-            width: 70%;
-            margin: 0 auto;
-            margin-top: 1%;
-        }
-        .body_style .product_details .product_navigation{
-            width: 100%;
-            display: flex;
-            
-            z-index: 2;
-            justify-content: space-between;
-            background-color: rgb(246,246,246);
-        }
-        .product_details .product_navigation .navigation_1{
-            display: flex;
-            width: 45%;
-        }
-        .product_details .product_navigation .navigation_1 div{
-            width: 33%;
-            text-align: center;
-            padding: 3%;
-            border: 1px solid rgb(229,229,229);
-            cursor: pointer;
-        }
-        .product_details .product_navigation .navigation_1 div:first-child{
-            border-bottom: 1px solid rgba(229,229,229,0);
-            background-color:rgb(255,255,255);
-            color:rgb(255,68,0)
-        }
-        .product_details .product_navigation .navigation_1:nth-child(1) span{
-            color: rgb(255,68,0)
-        }
-        .product_details .product_navigation .navigation_2{
-            width: 15%;  
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: rgb(255,68,0);
-            color: rgb(255,255,255);
-            cursor: pointer;
-            opacity: 0;
-        }
-        .product_details .product_introduce{
-            width: 100%;
-        }
-        .product_details .product_introduce .product_img{
-            width: 100%;
-            display: block;
-        }
-        .product_details .product_introduce .product_img img{
-            width: 100%;
-        }
-        .product_details .product_introduce .product_img table{
-            width: 100%;
-            margin-bottom: 2%;
-        }
-        .product_details .product_introduce .product_img table td{
-            padding: 1%;
-        }
-        .product_details .product_introduce .product_evaluate{
-            width: 100%;
-            display: none;
-        }
-        .product_details .product_introduce .product_evaluate .cowry_evaluate{
-            width: 100%;
-            border-bottom: 1px solid rgb(229,229,229);
-            margin-top: 2%;
-            height: 40px;
-            padding:  0 0 2px 0;
-        }
-        .product_details .product_introduce .product_evaluate .cowry_evaluate>div:first-child{
-            width: 10%;
-            font-size: 1.2em;
-            height: 40px;
-            margin-left: 2%;
-            border: 1px solid rgb(229,229,229);
-            border-bottom: 2px solid #fff;
-            padding: 0 1%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .product_details .product_introduce .product_evaluate .choose_evaluate{
-            margin-top:1%;
-            width: 100%;
-            border: 1px solid rgb(229,229,229);
-            background-color: rgb(252,252,252);
-            display: flex;
-            justify-content: space-between;
-            padding: 1% 0;
-        }
-        .product_details .product_introduce .product_evaluate .choose_evaluate .choose_evaluate1{
-            width: 30%;
-        }
-        .product_details .product_introduce .product_evaluate .choose_evaluate .choose_evaluate1 span{
-            font-size:0.9em;      
-        }
-        .product_details .product_introduce .product_evaluate .choose_evaluate .choose_evaluate1 span:nth-child(2){
-            color:rgb(255,68,0);
-        }
-    
-        .product_details .product_introduce .price_explain{
-            width: 100%;
-        }
-        .product_details .product_introduce .price_explain>h4{
-            border-bottom: 1px solid rgb(229,229,229);
-        }   
-        .product_details .product_introduce .price_explain>div{
-            margin-top: 2%;
-        }
-        .product_details .product_introduce .price_explain>div p{
-            margin: 0;
-        }
-        .product_details .product_introduce .price_explain>div p:first-child{
-            color: rgb(254,112,47);
-        }
     </style>
 </head>
 <body>
@@ -279,7 +163,6 @@
                                                     <i class="fa fa-caret-down"></i>
                                                 </div>
                                             </div>
-                                            <div class="move"></div>
                                             <div class="region">
                                                 <table cellspacing='5'>
                                                     <tr>
@@ -467,6 +350,17 @@
                             <tr>
                                 <td>成分含量: 51%(含)-70%(含)</td>
                                 <td>上市年份季节: 2019年秋季</td>
+                                <td>风格: 甜美</td>
+                            </tr>
+                            <tr>
+                                <td>组合形式: 单件</td>
+                                <td>袖长: 长袖</td>
+                                <td>款式: 套头</td>
+                            </tr>
+                            <tr>
+                                <td>厚薄: 加绒</td>
+                                <td>衣长: 常规</td>
+                                <td>服装版型: 宽松</td>
                             </tr>
                         </table>
                         <img src="img/product-details/gallery_6.jpg" alt="">
@@ -508,8 +402,27 @@
                                 </form>
                             </div>
                             <div class="choose_evaluate2">
-                                
+                                <div>
+                                    <p>推荐排序</p>
+                                    <p><i class="fa fa-caret-down"></i></p>
+                                </div>
+                                <div>
+                                    <div onclick="evaluateclick(0)">
+                                        <img src="img/icon/项目动态.svg" alt="">
+                                        <p>推荐排序</p>
+                                    </div>
+                                    <div onclick="evaluateclick(1)">
+                                        <img src="img/icon/周报.svg" alt="">
+                                        <p>最近评价</p>
+                                    </div>
+                                </div>
                             </div>
+                        </div>
+                        <div class="result_evaluate">
+                            <span>对不起，没有找到结果</span>
+                        </div>
+                        <div class="shop_safeguard">
+                            <span>购买前请查看该商品的 购物保障，明确您的售后保障权益。</span>
                         </div>
                         <div class="price_explain">
                             <h4>价格说明</h4>
@@ -526,6 +439,22 @@
                         </div>
                     </div>
                     <div class=" product_serve">
+                        <div class="server_explain">
+                            <div>
+                                <span><img src="img/icon/server1.png" alt=""></span>
+                                <div>
+                                    <h2>订单险</h2>
+                                    <p>卖家已为该商品投保订单险；您购买该商品每笔交易的售后将由保险公司全程担保赔付</p>
+                                </div>
+                            </div>
+                            <div>
+                                    <span><img src="img/icon/server2.png" alt=""></span>
+                                <div>
+                                    <h2>消费者保障服务</h2>
+                                    <p>该卖家已缴纳 1000.0 元保证金</p>
+                                </div>
+                            </div>
+                        </div>
                         <div class="price_explain">
                                     <h4>价格说明</h4>
                                     <div>

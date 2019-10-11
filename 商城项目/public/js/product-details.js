@@ -11,6 +11,14 @@ function cowryonclick(m){
         }
     }
 }
+//推荐排序
+function evaluateclick(m){
+    let showTitle = document.querySelector('.product_details .product_introduce .product_evaluate .choose_evaluate .choose_evaluate2>div:first-child p:first-child');
+    let sonTitle = document.querySelectorAll('.product_details .product_introduce .product_evaluate .choose_evaluate .choose_evaluate2>div:last-child div p');
+    let div_show = document.querySelector('.product_details .product_introduce .product_evaluate .choose_evaluate .choose_evaluate2>div:last-child');
+    showTitle.innerHTML = sonTitle[m].innerHTML;
+    div_show.style.display = 'none';
+}
 window.onload = function(){
     //整个div容器
     let container = document.getElementsByClassName('container')[0];
@@ -78,22 +86,26 @@ window.onload = function(){
         slider.style.display = 'none';
         
     }
-
+    //第一行地址的悬浮和点击效果
     let first_address = document.getElementsByClassName('first_address')[0];
     let second_address = document.getElementsByClassName('second_address')[0];
-    let remove = document.getElementsByClassName('fa-remove')[0];
+        //悬浮改变颜色
     first_address.onmouseover = function(){
-        first_address.style.cssText = 'color: rgb(255,68,0);border:1px solid rgb(255,68,0);background-color: rgb(255,242,232);cursor: pointer;'
+        first_address.style.cssText = 'color: rgb(255,68,0);border:1px solid rgb(255,68,0);background-color: rgb(255,242,232);'
     }
+        //离开时如果第二行未显示则恢复原样
     first_address.onmouseout = function(){
         if(second_address.style.opacity !== '1'){
-            first_address.style.cssText = 'color:black;border:1px solid rgb(255,68,0,0);background-color:whit;'
+            first_address.style.cssText = 'color:black;border:1px solid rgb(255,68,0,0);background-color:white;'
         }
     }
+        //点击时打开第二行地址选择栏位
     first_address.onclick = function(){
         second_address.style.cssText = 'opacity:1;z-index:2';
         first_address.style.cssText = 'color:white;background-color:rgb(255,68,0);border:1px solid rgb(255,68,0);'
     }
+    //点击叉叉关闭第二行地址选择栏位并恢复第一行地址颜色
+    let remove = document.getElementsByClassName('fa-remove')[0];
     remove.onclick = function(){
         second_address.style.cssText = 'opacity:0;z-index:-1';
         first_address.style.cssText = 'color:black;background-color:white;border:1px solid rgba(255,68,0,0);'
@@ -102,43 +114,33 @@ window.onload = function(){
     let choose1 = document.getElementById('choose1');
     let choose2 = document.getElementById('choose2');
     let choose3 = document.getElementById('choose3');
-    //进入选择区域时
-    let move = document.getElementsByClassName('move')[0];
-    move.style.width = choose1.offsetWidth + 'px';
-    move.style.height = choose1.offsetHeight  + 'px';
-    move.style.left = choose1.offsetLeft + 'px';
-    move.style.top = choose1.offsetTop + 'px';
-
     let region = document.getElementsByClassName('region')[0];
     let region_1 = document.getElementsByClassName('region_1')[0];
     let region_2 = document.getElementsByClassName('region_2')[0];
-
+    //省份选择
     let elems = document.querySelectorAll('.region>table td');
     for(let i=0;i<elems.length;i++){
         elems[i].onclick = function(){
             choose1.firstElementChild.innerHTML = elems[i].innerHTML;
             choose1.style.cssText = 'border:1px solid rgb(96,96,96);border-bottom:none;';
-            choose2.style.cssText = 'border:1px solid rgba(96,96,96,0);border-bottom:none;';
-            move.style.left = choose2.offsetLeft + 'px';
-            move.style.top = choose2.offsetTop + 'px';
             choose2.style.opacity = '1';
             region.style.display = 'none';
             region_1.style.display = 'block';
         }
     };
+    //地级市选择
     let elems_1 = document.querySelectorAll('.region_1>table td');
     for(let i=0,len=elems_1.length;i<len;i++){
         elems_1[i].onclick = function(){
             choose2.firstElementChild.innerHTML = elems_1[i].innerHTML;
             choose2.style.cssText = 'border:1px solid rgb(96,96,96);border-bottom:none;';
-            move.style.left = choose3.offsetLeft + 'px';
-            move.style.top = choose3.offsetTop + 'px';
             choose2.style.opacity = '1';
             choose3.style.opacity = '1';
             region_1.style.display = 'none';
             region_2.style.display = 'block';
         }
     };
+    //区县选择
     let elems_2 = document.querySelectorAll('.region_2>table td');
     for(let i=0,len=elems_2.length;i<len;i++){
         elems_2[i].onclick = function(){
@@ -148,14 +150,13 @@ window.onload = function(){
             first_address.style.cssText = 'color:black;background-color:white;border:1px solid rgba(255,68,0,0);'
         }
     };
+    //重新选择
     choose2.onclick = function(){
         choose2.firstElementChild.innerHTML = '请选择&nbsp;';
         choose3.style.opacity = '0';
         region_1.style.display = 'block';
         region_2.style.display = 'none';
-        move.style.left = choose2.offsetLeft + 'px';
-        move.style.top = choose2.offsetTop + 'px';
-        choose2.style.cssText = 'border: 1px solid rgba(0,0,0,0);border-bottom:none;opacity:1';
+        choose2.style.cssText = 'opacity:1';
     }
     choose1.onclick = function(){
         choose1.firstElementChild.innerHTML = '请选择&nbsp;';
@@ -164,9 +165,7 @@ window.onload = function(){
         region.style.display = 'block';
         region_1.style.display = 'none';
         region_2.style.display = 'none';
-        move.style.left = choose1.offsetLeft + 'px';
-        move.style.top = choose1.offsetTop + 'px';
-        choose1.style.cssText = 'border: 1px solid rgba(0,0,0,0);border-bottom:none;opacity:1';
+        choose1.style.cssText = 'opacity:1';
     }
     
     //选择尺码效果
@@ -250,6 +249,18 @@ window.onload = function(){
             }
         }
     }
+    //推荐排序
+    let choose_evaluate = document.querySelector('.product_details .product_introduce .product_evaluate .choose_evaluate .choose_evaluate2');
+    let div_show = document.querySelector('.product_details .product_introduce .product_evaluate .choose_evaluate .choose_evaluate2>div:last-child');
+    let tuijianpaixu = document.querySelector('.product_details .product_introduce .product_evaluate .choose_evaluate .choose_evaluate2>div:first-child p:first-child');
+    choose_evaluate.onmouseover = function(){
+        div_show.style.display = 'block';
+        tuijianpaixu.style.cssText = 'background-color: rgb(255,255,255)'
+    }
+    choose_evaluate.onmouseout = function(){
+        div_show.style.display = 'none';
+        tuijianpaixu.style.cssText = 'background-color: rgb(243,243,243)'
+    }
 }
 window.onscroll = function(){
     let  scrollTop = document.documentElement.scrollTop;
@@ -277,7 +288,7 @@ window.onscroll = function(){
     let product_introduce = document.querySelector('.product_details .product_introduce');
     let product_navigation_2 = document.querySelector('.product_details .product_navigation .navigation_2');
     if(product_navigationY  <= 67){
-        product_navigation.style.position = 'fixed';
+        product_navigation.style.cssText = 'position:fixed;z-index:3;';
         product_navigation.style.top = '67px';
         product_navigation.style.width = productW +2 +'px';
         product_introduce.style.cssText = 'padding-top:'+product_navigation.offsetHeight +'px';
