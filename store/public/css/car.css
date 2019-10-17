@@ -1,0 +1,200 @@
+p{
+   margin:0;
+}
+.carbody_style{
+    width: 100%;
+ }
+ .carbody_style .carbody_shopping{
+    width: 100%;
+    overflow: hidden;
+    height: 340px;
+ }
+ .carbody_style .carbody_shopping img{
+     width:100%;
+     margin-bottom: 100px;
+ }
+ .carbody_style .carbody_shopping>div{
+     position: absolute;
+     margin-top: 150px;
+     margin-left: 15%;
+     color: rgb(255,255,255);
+     line-height: 300%;
+ }
+ .carbody_style .carbody_shopping>div h1{
+     margin: 0;  
+     font-size: 3em;  
+ }
+ .carbody_style .carbody_shopping>div div{
+    margin: 0;
+    font-size: 1.5em;
+ }
+ .carbody_style .carbody_shopping>div div a{
+    color: rgb(255,255,255);
+ }
+ .carbody_style .carbody_shopping>div div a:hover{
+    color: rgb(147,124,111);
+ }
+ .carbody_style .carbody_row{
+   width: 80%;
+   margin: auto;
+}
+.carbody_row .carbody_row_pay{
+    width: 100%;
+    margin-top: 2%;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid rgb(230,230,230);
+    cursor: pointer;
+    
+}
+.carbody_row .carbody_row_pay .carbody_row_pay_left{
+    width: 50%;
+    display: flex;
+    font-size: 1.2em;
+}
+.carbody_row .carbody_row_pay .carbody_row_pay_left div{
+   width: 25%;
+   height: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.carbody_row .carbody_row_pay .carbody_row_pay_left div:first-child{
+    color:rgb(255,68,0) ;
+    border-bottom: 2px solid rgb(255,68,0);
+}
+.carbody_row .carbody_row_pay .carbody_row_pay_left>span{
+   border-left: 1px solid gray;
+   height: 30%;
+   margin: auto 0;
+}
+.carbody_row .carbody_row_pay .carbody_row_pay_left div>span:last-child{
+    color: rgb(255,68,0);
+}
+.carbody_row .carbody_row_pay .carbody_row_pay_right{
+    width: 30%;
+    margin: auto 0;
+    text-align: right;
+    padding: 2%;
+}
+.carbody_row .carbody_row_pay .carbody_row_pay_right span:nth-child(2){
+    color: rgb(255,68,0);
+}
+.carbody_row .carbody_row_pay .carbody_row_pay_right button{
+    border: none;
+    background-color: rgb(170,170,170);
+    color: rgb(255,255,255);
+    padding: 1% 4%;
+    border-radius: 5%;
+}
+.carbody_row .carbody_row_details{
+   width: 100%;
+}
+.carbody_row .carbody_row_details .carbody_row_choose{
+    display: flex;
+    width: 100%;
+    margin: 1% 0;
+    padding: 1%;
+}
+.carbody_row .carbody_row_details .carbody_row_choose>div{
+    width: 10%;
+}
+.carbody_row .carbody_row_details .carbody_row_choose>div:nth-child(2){
+   width: 50%;
+}
+.carbody_row .carbody_row_details .carbody_row_product{
+   display: flex;
+   width: 100%;
+   padding: 1%;
+   margin-top: 1.5%;
+   border: 1px solid rgb(204,204,204);
+   background-color: rgb(252,252,252);
+}
+.carbody_row .carbody_row_details .carbody_row_product>div{
+    width: 10%;
+}
+.carbody_row .carbody_row_details .carbody_row_product>div:nth-child(1){
+   width: 3%;
+}
+.carbody_row .carbody_row_details .carbody_row_product>div:nth-child(2){
+   width: 57%;
+}
+.carbody_row .carbody_row_details .carbody_row_product .carbody_row_productmessage{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.carbody_row .carbody_row_details .carbody_row_product .carbody_row_productmessage>div:first-child{
+    width: 65%;
+    display: flex;
+    
+}
+.carbody_row .carbody_row_details .carbody_row_product .carbody_row_productmessage>div:first-child>div:first-child{
+   width: 30%;
+}
+.carbody_row .carbody_row_details .carbody_row_product .carbody_row_productmessage>div:first-child>div:first-child img{
+    width: 100%;
+}
+.carbody_row .carbody_row_details .carbody_row_product .carbody_row_productmessage>div:first-child>div:last-child{
+    width: 70%;
+    margin-left: 4%;
+}
+.carbody_row .carbody_row_details .carbody_row_product .carbody_row_productmessage>div:first-child>div:last-child p{
+    margin:0;
+}
+.carbody_row .carbody_row_details .carbody_row_product .carbody_row_productmessage>div:last-child{
+    width: 30%;
+}
+.carbody_row .carbody_row_details .carbody_row_product .carbody_row_productmessage>div:last-child p{
+    margin: 0;
+    font-size: 0.9em;
+    color: rgb(156,156,156);
+}
+.carbody_row .carbody_row_details .carbody_row_product>div:nth-child(3) p:first-child{
+   color: rgb(156,156,156);
+   text-decoration: line-through;
+   font-size: 0.9em;
+}
+.carbody_row .carbody_row_details .carbody_row_product>div:nth-child(3) p:last-child{
+   font-size: 0.9em;
+   font-weight: 700;
+}
+.carbody_row .carbody_row_details .carbody_row_product>div:nth-child(4){
+   display: flex;
+}
+ .carbody_row .carbody_row_details .carbody_row_product>div:nth-child(4) .minus{
+   width: 15%;
+   height:18%;
+   text-align: center;
+   border: 1px solid rgb(204,204,204);
+   cursor: pointer;
+   background-color: rgb(237,237,237);
+   color: rgb(204,204,204);
+}
+.carbody_row .carbody_row_details .carbody_row_product>div:nth-child(4) .number{
+   width: 25%;
+   height:18%;
+   text-align: center;
+   border: 1px solid rgb(204,204,204);
+}
+.carbody_row .carbody_row_details .carbody_row_product>div:nth-child(4) .add{
+   width: 15%;
+   height:18%;
+   text-align: center;
+   border: 1px solid rgb(204,204,204);
+   cursor: pointer;
+} 
+.carbody_row .carbody_row_details .carbody_row_product>div:nth-child(4) p{
+   margin: 0;
+   margin-left: 2%;
+}
+.carbody_row .carbody_row_details .carbody_row_product>div:nth-child(5){
+   color: rgb(255,68,0);
+   font-size: 0.9em;
+   font-weight: 700;
+}
+.carbody_row .carbody_row_details .carbody_row_product>div:nth-child(6) p{
+   font-size: 0.9em;
+   cursor: pointer;
+   margin-top: 2%;
+}
