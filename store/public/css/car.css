@@ -44,13 +44,12 @@ p{
     display: flex;
     justify-content: space-between;
     border-bottom: 2px solid rgb(230,230,230);
-    cursor: pointer;
-    
 }
 .carbody_row .carbody_row_pay .carbody_row_pay_left{
     width: 50%;
     display: flex;
     font-size: 1.2em;
+    cursor: pointer;
 }
 .carbody_row .carbody_row_pay .carbody_row_pay_left div{
    width: 25%;
@@ -86,6 +85,7 @@ p{
     color: rgb(255,255,255);
     padding: 1% 4%;
     border-radius: 5%;
+    cursor: pointer;
 }
 .carbody_row .carbody_row_details{
    width: 100%;
@@ -105,7 +105,7 @@ p{
 .carbody_row .carbody_row_details .carbody_row_product{
    display: flex;
    width: 100%;
-   padding: 1%;
+   padding: 1% 0;
    margin-top: 1.5%;
    border: 1px solid rgb(204,204,204);
    background-color: rgb(252,252,252);
