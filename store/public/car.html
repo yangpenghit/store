@@ -16,63 +16,7 @@
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
     <style>
-         .carbody_row .carbody_row_details .carbody_row_footchoose{
-            display: flex;
-            height: 50px;
-            margin-top: 1.5%;
-            width: 100%;
-            justify-content: space-between;
-            background-color: rgb(229,229,229);
-         }
-         .carbody_row .carbody_row_details .carbody_row_footchoose .carbody_row_footchooseleft{
-             width:40%;
-             display: flex;
-         }
-         .carbody_row .carbody_row_details .carbody_row_footchoose .carbody_row_footchooseleft div{
-            width:25%;
-            margin: auto 0;
-            text-align: center;
-         }
-         .carbody_row .carbody_row_details .carbody_row_footchoose .carbody_row_footchooseright{
-             display: flex;
-             width: 50%;
-             justify-content:flex-end;
-         }
-         .carbody_row .carbody_row_details .carbody_row_footchoose .carbody_row_footchooseright div:first-child{
-            width: 20%;
-            margin: auto 0;
-            text-align: end;
-         }
-         .carbody_row .carbody_row_details .carbody_row_footchoose .carbody_row_footchooseright div:first-child>span{
-            font-size: 1.3em;
-            font-weight: 600;
-            margin: 0 1%;
-            color: rgb(255,68,0);
-         }
-         .carbody_row .carbody_row_details .carbody_row_footchoose .carbody_row_footchooseright div:nth-child(2){
-            width: 45%;
-            margin: auto 0;
-            text-align: end;
-             line-height: 50px;
-             white-space: nowrap;
-         }
-         .carbody_row .carbody_row_details .carbody_row_footchoose .carbody_row_footchooseright div:nth-child(2) span{
-            font-size: 1.3em;
-            font-weight: 600;
-            margin: 0 1%;
-            color: rgb(255,68,0);
-         }
-         .carbody_row .carbody_row_details .carbody_row_footchoose .carbody_row_footchooseright div:last-child{
-            width: 20%;
-            margin: auto 0;
-            text-align: center;
-            height: 100%;
-            color: rgb(255,255,255);
-            background-color: rgb(176,176,176);
-            font-size: 1.5em;
-            line-height: 50px;
-            cursor: pointer;
-         }
+         
     </style>
 </head>
 <body>
@@ -112,11 +56,8 @@
                     </li>
                     <li>
                         <a href="car.html">
-                            <img src="img/icon/bag.svg" alt="">
-                            
-                        </a>
-                        <!-- <span class="header_search_span">3</span> -->
-                        
+                            <img src="img/icon/bag.svg" alt="">                       
+                        </a>      
                     </li>
                 </ul>
             </div>
@@ -219,7 +160,7 @@
                     </div>
                     <div class="carbody_row_product">
                         <div>
-                            <input type="checkbox">
+                            <input type="checkbox" onclick="ChooseSingle()">
                         </div>
                         <div class="carbody_row_productmessage">
                             <div>
@@ -240,21 +181,21 @@
                             <p>￥<span>299.00</span></p>
                         </div>
                         <div>
-                            <div class="minus">-</div>
+                            <div class="minus" onclick="addMinus(this)">-</div>
                             <div class="number">1</div>
-                            <div class="add">+</div>
+                            <div class="add" onclick="addMinus(this)" value='readonly'>+</div>
                         </div>
                         <div>
                             ￥299.00
                         </div>
                         <div>
                             <p>移入收藏夹</p>
-                            <p>删除</p>
+                            <p onclick="Delete(this)">删除</p>
                         </div>
                     </div>
                     <div class="carbody_row_product">
                             <div>
-                                <input type="checkbox">
+                                <input type="checkbox"  onclick="ChooseSingle()">
                             </div>
                             <div class="carbody_row_productmessage">
                                 <div>
@@ -275,21 +216,21 @@
                                 <p>￥<span>299.00</span></p>
                             </div>
                             <div>
-                                <div class="minus">-</div>
+                                <div class="minus" onclick="addMinus(this)">-</div>
                                 <div class="number">1</div>
-                                <div class="add">+</div>
+                                <div class="add" onclick="addMinus(this)">+</div>
                             </div>
                             <div>
                                 ￥299.00
                             </div>
                             <div>
                                 <p>移入收藏夹</p>
-                                <p>删除</p>
+                                <p onclick="Delete(this)">删除</p>
                             </div>
                     </div>
                     <div class="carbody_row_product">
                             <div>
-                                <input type="checkbox">
+                                <input type="checkbox"  onclick="ChooseSingle()">
                             </div>
                             <div class="carbody_row_productmessage">
                                 <div>
@@ -310,21 +251,21 @@
                                 <p>￥<span>299.00</span></p>
                             </div>
                             <div>
-                                <div class="minus">-</div>
+                                <div class="minus" onclick="addMinus(this)">-</div>
                                 <div class="number">1</div>
-                                <div class="add">+</div>
+                                <div class="add" onclick="addMinus(this)">+</div>
                             </div>
                             <div>
                                 ￥299.00
                             </div>
                             <div>
                                 <p>移入收藏夹</p>
-                                <p>删除</p>
+                                <p onclick="Delete(this)">删除</p>
                             </div>
                     </div>
                     <div class="carbody_row_product">
                             <div>
-                                <input type="checkbox">
+                                <input type="checkbox"  onclick="ChooseSingle()">
                             </div>
                             <div class="carbody_row_productmessage">
                                 <div>
@@ -345,21 +286,21 @@
                                 <p>￥<span>299.01</span></p>
                             </div>
                             <div>
-                                <div class="minus">-</div>
+                                <div class="minus" onclick="addMinus(this)">-</div>
                                 <div class="number">1</div>
-                                <div class="add">+</div>
+                                <div class="add" onclick="addMinus(this)">+</div>
                             </div>
                             <div>
                                 ￥299.01
                             </div>
                             <div>
                                 <p>移入收藏夹</p>
-                                <p>删除</p>
+                                <p onclick="Delete(this)">删除</p>
                             </div>
                     </div>
                     <div class="carbody_row_product">
                             <div>
-                                <input type="checkbox">
+                                <input type="checkbox"  onclick="ChooseSingle()">
                             </div>
                             <div class="carbody_row_productmessage">
                                 <div>
@@ -380,16 +321,16 @@
                                 <p>￥<span>299.01</span></p>
                             </div>
                             <div>
-                                <div class="minus">-</div>
+                                <div class="minus" onclick="addMinus(this)">-</div>
                                 <div class="number">1</div>
-                                <div class="add">+</div>
+                                <div class="add" onclick="addMinus(this)">+</div>
                             </div>
                             <div>
                                 ￥299.01
                             </div>
                             <div>
                                 <p>移入收藏夹</p>
-                                <p>删除</p>
+                                <p onclick="Delete(this)">删除</p>
                             </div>
                     </div>
                     <div class="carbody_row_footchoose">
@@ -454,70 +395,5 @@
 <script src="js/product-details.js"></script>
 <script src="js/car.js"></script>
 <script>
-    function Pay_Onclick(m){
-        let pay_div = document.querySelectorAll('.carbody_row_details .carbody_row_pay .carbody_row_pay_left div');
-        let pay_span = document.querySelectorAll('.carbody_row .carbody_row_pay .carbody_row_pay_left div>span:first-child');
-        pay_div[m].style.cssText = 'border-bottom:2px solid rgb(255,68,0)'
-        pay_span[m].style.color = 'rgb(255,68,0)';
-        for(let n=0,len=pay_div.length;n<len;n++){
-            if(n!=m){
-                pay_div[n].style.cssText = 'border-bottom:1px solid rgba(255,68,0,0)';
-                pay_span[n].style.color = 'rgb(0,0,0)'
-            }
-        }
-    }
-    function ChooseAll(m){
-        //获取所有的复选框
-        let CheckBox = document.querySelectorAll('.carbody_row input');
-        //获取结算金额
-        let PayMoney_1 = document.querySelector('.carbody_row_pay_right span:nth-child(2)');
-        let PayMoney_2 = document.querySelector('.carbody_row_footchooseright div:nth-child(2) span');
-        //获取两个结算按钮
-        let PayButton_1 = document.querySelector('.carbody_row_pay_right button');
-        let PayButton_2 = document.querySelector('.carbody_row_footchooseright div:last-child');
-        //获取每个产品的单价
-        let SingelMoney = document.querySelectorAll('.carbody_row_product div:nth-child(3) p:last-child span');
-        //获取商品总数span
-        let ProductTotal = document.querySelector('.carbody_row_footchooseright div:first-child>span');
-        //获取每个商品栏位
-        let ProductField = document.querySelectorAll('.carbody_row_product');
-        //点击一个复选框时，checked状态不一致，所以用一个参数判断是点击的哪一个全选框
-        let Arr_CheckBox = [CheckBox[0].checked,CheckBox[CheckBox.length-1].checked];
-        if(Arr_CheckBox[m-1]){
-            //结算按钮颜色改变
-            PayButton_1.style.cssText = 'background-color:rgb(255,68,0)';
-            PayButton_2.style.cssText = 'background-color:rgb(255,68,0)';
-            ProductTotal.innerHTML = CheckBox.length-2;
-            let TotalMoney = 0.00;
-            for(let m=0,len=CheckBox.length;m<len;m++){
-                //选中所有复选框
-                CheckBox[m].checked = 'checked';
-                //计算中金额并改变商品栏位背景色
-                if(m+2<len){
-                    TotalMoney += Number(SingelMoney[m].innerHTML);
-                    ProductField[m].style.cssText = 'background-color:rgb(255,248,225)';
-                }
-            }
-            //结算金额赋值
-            PayMoney_1.innerHTML = '￥'+TotalMoney;
-            PayMoney_2.innerHTML = '￥'+TotalMoney;
-        }else{
-            //总金额清零,结算按钮颜色改变
-            PayMoney_1.innerHTML = '0.00';
-            PayMoney_2.innerHTML = '0.00';
-            PayButton_1.style.cssText = 'background-color:rgb(176,176,176)';
-            PayButton_2.style.cssText = 'background-color:rgb(176,176,176)';
-            ProductTotal.innerHTML = 0;
-            for(let m=0,len=CheckBox.length;m<len;m++){
-                //取消所有复选框
-                CheckBox[m].checked = '';
-                if(m+2<len){
-                    //改变商品栏位背景色
-                    ProductField[m].style.cssText = 'background-color:rgb(252,252,252)'
-                } 
-                
-            }
-        }
-    }
 </script>
 </html>

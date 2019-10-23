@@ -176,6 +176,7 @@ p{
    height:18%;
    text-align: center;
    border: 1px solid rgb(204,204,204);
+   background-color: rgb(255,255,255);
 }
 .carbody_row .carbody_row_details .carbody_row_product>div:nth-child(4) .add{
    width: 15%;
@@ -183,6 +184,7 @@ p{
    text-align: center;
    border: 1px solid rgb(204,204,204);
    cursor: pointer;
+   background-color: rgb(255,255,255);
 } 
 .carbody_row .carbody_row_details .carbody_row_product>div:nth-child(4) p{
    margin: 0;
@@ -197,4 +199,61 @@ p{
    font-size: 0.9em;
    cursor: pointer;
    margin-top: 2%;
+}
+.carbody_row .carbody_row_details .carbody_row_footchoose{
+   display: flex;
+   height: 50px;
+   margin-top: 1.5%;
+   width: 100%;
+   justify-content: space-between;
+   background-color: rgb(229,229,229);
+}
+.carbody_row .carbody_row_details .carbody_row_footchoose .carbody_row_footchooseleft{
+    width:40%;
+    display: flex;
+}
+.carbody_row .carbody_row_details .carbody_row_footchoose .carbody_row_footchooseleft div{
+   width:25%;
+   margin: auto 0;
+   text-align: center;
+}
+.carbody_row .carbody_row_details .carbody_row_footchoose .carbody_row_footchooseright{
+    display: flex;
+    width: 50%;
+    justify-content:flex-end;
+}
+.carbody_row .carbody_row_details .carbody_row_footchoose .carbody_row_footchooseright div:first-child{
+   width: 20%;
+   margin: auto 0;
+   text-align: end;
+}
+.carbody_row .carbody_row_details .carbody_row_footchoose .carbody_row_footchooseright div:first-child>span{
+   font-size: 1.3em;
+   font-weight: 600;
+   margin: 0 1%;
+   color: rgb(255,68,0);
+}
+.carbody_row .carbody_row_details .carbody_row_footchoose .carbody_row_footchooseright div:nth-child(2){
+   width: 45%;
+   margin: auto 0;
+   text-align: end;
+    line-height: 50px;
+    white-space: nowrap;
+}
+.carbody_row .carbody_row_details .carbody_row_footchoose .carbody_row_footchooseright div:nth-child(2) span{
+   font-size: 1.3em;
+   font-weight: 600;
+   margin: 0 1%;
+   color: rgb(255,68,0);
+}
+.carbody_row .carbody_row_details .carbody_row_footchoose .carbody_row_footchooseright div:last-child{
+   width: 20%;
+   margin: auto 0;
+   text-align: center;
+   height: 100%;
+   color: rgb(255,255,255);
+   background-color: rgb(176,176,176);
+   font-size: 1.5em;
+   line-height: 50px;
+   cursor: pointer;
 }
