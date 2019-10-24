@@ -268,15 +268,12 @@ window.onscroll = function(){
     let Header = document.getElementsByClassName('header_style')
     //显示右部回到顶部按钮
     let Rightbar = document.getElementsByClassName('rightbar');
-    let header_search_span = document.getElementsByClassName('header_search_span')[0];
     if(scrollTop >= 100){
         Rightbar[0].style.cssText = 'z-index:10;opacity:1'
         Header[0].style.cssText = 'height: 67px;'
-        header_search_span.style.cssText = 'font-size:17px;'
     }else{
         Rightbar[0].style.cssText = "z-index:-1;opacity:0"
         Header[0].style.cssText = 'height: 87px;'
-        header_search_span.style.cssText = 'font-size:20px;'
     }
     //定位商品详情导航栏位
     let product_navigation = document.querySelector('.body_style .product_details .product_navigation');

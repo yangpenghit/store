@@ -112,11 +112,41 @@
     }
     //删除购物车商品
     function Delete(e){
+        //通过栏位前部的复选框按钮判断该商品是否被选中
+        //若被选中，使用总结算金额减去被删除商品总价，否则不做操作，仅删除商品。
+        let checkEd = e.parentElement.parentElement.children[0].children[0].checked;
+        ;
+        if(checkEd){
+            //获取结算金额
+            let PayMoney_1 = document.querySelector('.carbody_row_pay_right span:nth-child(2)');
+            let PayMoney_2 = document.querySelector('.carbody_row_footchooseright div:nth-child(2) span');
+            //获取商品总数span
+            let ProductTotal = document.querySelector('.carbody_row_footchooseright div:first-child>span');
+            let totalMoney = PayMoney_1.innerHTML.slice(1);
+            //计算被删除后所有商品的总价
+            let deleteProductPrice = e.parentElement.previousElementSibling.innerHTML.split('￥')[1];
+            let deleteProductNumber = e.parentElement.previousElementSibling.previousElementSibling.children[1].innerHTML;
+            let Total = parseInt(totalMoney) - parseInt(deleteProductPrice)*deleteProductNumber;
+            switch(Total){
+                case 0:
+                    PayMoney_1.innerHTML = '0.00';
+                    PayMoney_2.innerHTML = '0.00';
+                    ProductTotal.innerHTML = 0;
+                    break;
+                default:
+                    PayMoney_1.innerHTML = '￥' + Total.toFixed(2);
+                    PayMoney_2.innerHTML = '￥' + Total.toFixed(2);
+                    ProductTotal.innerHTML = parseInt(ProductTotal.innerHTML)-1;
+
+            }
+        }
         //获取父元素
         let DeleteNode = document.querySelector('.carbody_row_details');
         //获取点击元素所在的Div
         let DeleteTarget = e.parentElement.parentElement;
-        DeleteNode.removeChild(DeleteTarget);
+        with(DeleteNode){
+            removeChild(DeleteTarget);
+        }
     }
     //加减商品
     function addMinus(e){
