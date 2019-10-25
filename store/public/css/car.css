@@ -257,3 +257,69 @@ p{
    line-height: 50px;
    cursor: pointer;
 }
+.carbody_style .carbody_hot{
+   width: 80%;
+   margin: 2% auto;
+}
+.carbody_style .carbody_hot .carbody_hot_firstrow{
+   display: flex;
+   border-bottom: 3px solid rgb(230,230,230);
+   height: 50px;
+   padding: 0 0 1px 0;
+   margin: 1% 0;
+}
+.carbody_style .carbody_hot .carbody_hot_firstrow>div{
+   height: 50px;
+   border-bottom: 3px solid rgb(255,80,25);
+   display: flex;
+   padding: 0 1%;
+   justify-content: center;
+   align-items: center;
+   font-weight: 550;
+   font-size: 1.1em;
+   color: rgb(255,80,25);
+}
+.carbody_hot .carbody_more .carbody_more_first{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin: 5% 0 ;
+}
+.carbody_hot .carbody_more .carbody_more_first div{
+   width: 20%;
+   border-bottom: 1px solid rgb(232,232,232);
+   height: 0;
+}
+.carbody_hot .carbody_more .carbody_more_first div:nth-child(2){
+   width: 60%;
+   height: 100%;
+   text-align: center;
+   border: none;
+}
+.carbody_hot .carbody_more .carbody_more_first div:nth-child(2) span:first-child{
+   color: rgb(255,80,25);
+   font-size: 1.1em;
+   font-weight: 600;
+}
+.carbody_hot .carbody_more .carbody_more_first div:nth-child(2) span:last-child{
+   color: rgb(204,204,204);
+   text-decoration: line-through;
+   font-size: 0.9em;
+}
+.carbody_hot .carbody_more .carbody_more_ds{
+   white-space: nowrap;
+   overflow: hidden;
+   font-size: 0.97em;
+}
+.carbody_hot .carbody_more .carbody_more_tm{
+   display: flex;
+   justify-content: space-between;
+   margin: 5% 0;
+}
+.carbody_hot .carbody_more .carbody_more_tm>div{
+   color: rgb(108,108,108);
+   font-size: 0.8em;
+}
+.carbody_hot .carbody_more .carbody_more_tm img{
+   width: 13%;
+}
